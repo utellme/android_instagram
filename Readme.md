@@ -36,9 +36,9 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-[WalkThrough] "https://github.com/utellme/android_instagram/blob/master/Android_Instagram_Wk1_Demo.gif"
+[WalkThrough] Andriod_Instagram_Wk1_Demo.gif
 
-<img src='https://github.com/utellme/android_instagram/blob/master/Android_Instagram_Wk1_Demo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/utellme/android_instagram/blob/master/Andriod_Instagram_Wk1_Demo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
