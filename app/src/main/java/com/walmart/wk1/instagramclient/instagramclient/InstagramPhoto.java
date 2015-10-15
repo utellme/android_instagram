@@ -17,6 +17,6 @@ public class InstagramPhoto {
     public String timestamp;
     public String firstComment;
     public String commentUser;
-    public ArrayList<InstagramComments> comments = new ArrayList<InstagramComments>();
+    public ArrayList<InstagramComments> comments;
 
 }

@@ -21,7 +21,7 @@ public class PhotosActivity extends AppCompatActivity {
 
     public static String CLIENT_ID = "7e47b8d0f7554dc8affa22b105181887";
     private ArrayList<InstagramPhoto> photos;
-    private ArrayList<InstagramComments> comments;
+    //private ArrayList<InstagramComments> comments;
     private InstagramPhotosAdapter photosAdapter;
 
 
@@ -32,7 +32,7 @@ public class PhotosActivity extends AppCompatActivity {
 
         photos = new ArrayList<>();
 
-        comments = new ArrayList<>();
+        //comments = new ArrayList<>();
 
         //1. create adatper
         photosAdapter = new InstagramPhotosAdapter(this,photos);
@@ -94,6 +94,7 @@ public class PhotosActivity extends AppCompatActivity {
                         photo.commentUser = commentsJSON.getJSONObject(0).getJSONObject("from").getString("username");
 
                         int maxComments = Math.min(photo.commentsCount, 2);
+                        photo.comments = new ArrayList<InstagramComments>();
 
                         for( int j=0; j <= maxComments; j++ ){
 
@@ -103,15 +104,20 @@ public class PhotosActivity extends AppCompatActivity {
                             comment.username = commentsJSON.getJSONObject(j).getJSONObject("from").getString("username");
                             comment.profileUrl = commentsJSON.getJSONObject(j).getJSONObject("from").getString("profile_picture");
                             comment.fullname = commentsJSON.getJSONObject(j).getJSONObject("from").getString("full_name");
-                            comments.add(comment);
+                            photo.comments.add(comment);
 
                         }
 
-                        photo.comments = comments;
+                        //photo.comments = comments;
                         photos.add(photo);
 
+//                        System.out.println("Comment1: " + photo.comments.get(0).username + ": " + photo.comments.get(0).text);
+//                        System.out.println("Comment2: " + photo.comments.get(1).username + ": " + photo.comments.get(1).text);
+//                        System.out.println("Comment3: " + photo.comments.get(2).username + ": " + photo.comments.get(2).text);
+//                        System.out.println("Size: " + photo.comments.size());
+
                         //clean up local array comments.
-                        comments.clear();
+                        //comments.clear();
                     }
                 }catch(JSONException  e){
 
